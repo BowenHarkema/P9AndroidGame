@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Testing_1.unity
+=======
+- path: Assets/Scene/_Testing_GameSpark.unity
+>>>>>>> 18ba831613b22a324cc98903e46f3a4735d36403
   isLoaded: 1
   isActive: 1
