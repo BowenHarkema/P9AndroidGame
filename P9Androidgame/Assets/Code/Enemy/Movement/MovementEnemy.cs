@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementPlayer : MonoBehaviour {
+public class MovementEnemy : MonoBehaviour {
 
     [SerializeField]
     private float _Speed, _MaxSpeed;
@@ -14,19 +14,19 @@ public class MovementPlayer : MonoBehaviour {
     [SerializeField]
     private Transform _GroundCheck;
 
-    void Awake ()
+    void Awake()
     {
         _RBody = gameObject.GetComponent<Rigidbody2D>();
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
         _Grounded = Physics2D.Linecast(transform.position, _GroundCheck.position, -1 << LayerMask.NameToLayer("Ground"));
-	}
+    }
 
     private void FixedUpdate()
     {
-        float hinput = 1f;
+        float hinput = -1f;
 
         if (hinput * _RBody.velocity.x < _MaxSpeed)
         {
