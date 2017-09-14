@@ -18,6 +18,6 @@ public class CameraController : MonoBehaviour {
         float selfy = transform.position.y;
         float targety = _PlayerTarget.transform.position.y;
 
-        gameObject.transform.position = new Vector3(Mathf.Lerp(selfx, targetx, _FollowDelay), Mathf.Lerp(selfy, targety + 4, _FollowDelay), _PlayerTarget.transform.position.z - 10f);
+        gameObject.transform.position = new Vector3(Mathf.Lerp(selfx, targetx + 5, _FollowDelay), 0, _PlayerTarget.transform.position.z - 10f);
 	}
 }

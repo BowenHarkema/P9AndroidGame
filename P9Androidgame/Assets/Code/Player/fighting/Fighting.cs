@@ -60,7 +60,7 @@ public class Fighting : MonoBehaviour {
 
                         if (_TouchEndPos.y < _TouchStartPos.y)
                         {
-                            Debug.Log("swipe down");
+                            gameObject.GetComponent<Rigidbody2D>().AddForce(-Vector2.up * 500);
                         }
                     }
                 }

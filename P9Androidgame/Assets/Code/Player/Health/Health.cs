@@ -12,7 +12,8 @@ public class Health : MonoBehaviour {
     {
         if (_Health <= 0)
         {
-            SceneManager.LoadScene("Game Over");
+            Debug.Log("Game over");
+            Application.Quit();
         }	
 	}
 }

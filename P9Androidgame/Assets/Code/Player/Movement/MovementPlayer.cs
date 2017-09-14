@@ -26,13 +26,6 @@ public class MovementPlayer : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        float hinput = 1f;
-
-        if (hinput * _RBody.velocity.x < _MaxSpeed)
-        {
-            _RBody.AddForce(Vector2.right * hinput * _Speed);
-        }
-
         if (Mathf.Abs(_RBody.velocity.x) > _MaxSpeed)
         {
             _RBody.velocity = new Vector2(Mathf.Sign(_RBody.velocity.x) * _MaxSpeed, _RBody.velocity.y);
